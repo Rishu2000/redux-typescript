@@ -10,7 +10,7 @@ import { Provider } from 'react-redux';
 
 const store: Store<ArticlesState, ArticleAction> 
   & {dispatch: DisptachType} 
-  = createStore(reducer, applyMiddleware(thunk));
+  = createStore(reducer, applyMiddleware(thunk));   //passed middleware.
 
 ReactDOM.render(
   <React.StrictMode>

@@ -14,7 +14,7 @@ const store: Store<ArticlesState, ArticleAction>
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={store}>    {/**connect React to Redux by providing the store object as props to the Provider component. */}
       <App />
     </Provider>
   </React.StrictMode>,

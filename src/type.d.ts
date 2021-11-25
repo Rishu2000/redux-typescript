@@ -7,3 +7,8 @@ interface IArticle {
 type ArticlesState = {
     articles: IArticle[];
 }
+
+type ArticleAction = {
+    type: string;
+    article: IArticle;
+}

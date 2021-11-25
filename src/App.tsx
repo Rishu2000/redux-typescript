@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
+import AddArticle from './components/AddArticle';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      Rishav
-    </div>
-  );
+    <main className="App">
+      <h1>My Articles</h1>
+      <AddArticle/>
+    </main>
+  )
 }
 
 export default App;

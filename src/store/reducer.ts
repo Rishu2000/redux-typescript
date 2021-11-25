@@ -17,3 +17,32 @@ const initialState: ArticlesState = {
         }
     ]
 }
+
+const reducer = (
+    state : ArticlesState = initialState,
+    action : ArticleAction
+    ): ArticlesState => {
+        switch(action.type) {
+            case actionTypes.ADD_ARTICLE : 
+                const newArticle: IArticle = {
+                    id: Math.random(),
+                    title: action.article.title,
+                    body: action.article.body
+                }
+                return {
+                    ...state,
+                    articles: state.articles.concat(newArticle)
+                }
+            case actionTypes.REMOVE_ARTICLE : 
+                const updatedArticles: IArticle[] = state.articles.filter(
+                    article => article.id !== action.article.id && article.title !== action.article.title
+                    )
+                return {
+                    ...state,
+                    articles: updatedArticles
+                }
+        }
+        return state;
+}
+
+export default reducer;

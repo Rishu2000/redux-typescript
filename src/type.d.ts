@@ -12,3 +12,5 @@ type ArticleAction = {
     type: string;
     article: IArticle;
 }
+
+type DisptachType = (args: ArticleAction) => ArticleAction;
